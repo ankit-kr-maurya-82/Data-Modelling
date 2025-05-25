@@ -7,12 +7,12 @@ const subTodoSchema = new mongoose.Schema(
             required: true
         },
         complete: {
-            type: Boolean,
-            default: false
+            type: Boolean,       
+            default: false     
         },
         createdBy: {
             type: mongoose.Schema.Types.ObjectId,
-            ref: "User"
+            ref: "User"   // Reference to the User who created the Sub-Todo
         }
     }, 
     {timestamps: true}

@@ -13,12 +13,12 @@ const todoSchema = new mongoose.Schema(
         },
         createBy: {
             type: mongoose.Schema.Types.ObjectId,
-            ref: "User"
+            ref: "User"    // Reference to the User who created the Todo
         },
         subTodo: [
             {
                 type: mongoose.Schema.Types.ObjectId,
-                ref: "SubTodo"
+                ref: "SubTodo"    // Reference to Sub-Todos associated with this Todo
             }
         ] //Array of Sub-Todos
     }, 
